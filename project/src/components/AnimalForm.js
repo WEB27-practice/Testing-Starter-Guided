@@ -50,9 +50,9 @@ const AnimalForm = ({ errors, touched, values }) => {
             />
             <button>Submit!</button>
         </form>
-        <h4>Current Animals</h4>
+        <h4 data-testid='list-header'>Current Animals Test Species</h4>
         {animals.map(animal => (
-            <p key={animal.id}>{animal.species}</p>
+            <p data-testid={animal.species} key={animal.id}>{animal.species}</p>
         ))}
         </div>
     );
